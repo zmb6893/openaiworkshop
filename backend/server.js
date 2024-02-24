@@ -1,8 +1,12 @@
 // Grab the express module
 const express = require("express");
+<<<<<<< Updated upstream
 
 // Import OpenAI
 const OpenAI = require("openai");
+=======
+// IMPORT OPEN AI
+>>>>>>> Stashed changes
 
 // Import the apiKey
 const apiKey = require("./apiKey")
@@ -34,14 +38,9 @@ app.get('/myFirstOpenAICall', async (req, res) => {
 	// Get the message and role from the query parameters
 	const contentInput = req.query.message; 
 
+	// Create a new chat completions: required fields model, messages
 	// Make a request to the OpenAI with your message prompt!
-	const response = await client.chat.completions.create({
-		model: "gpt-4",
-		temperature: 1,
-		messages: [
-			{role: "user", content: contentInput}
-		]
-	})
+	const response = "REPLACE ME";
 
 	// Send the http response (This will make it appear in your browser!)
 	res.send(response);
@@ -49,16 +48,13 @@ app.get('/myFirstOpenAICall', async (req, res) => {
 
 
 app.get('/generateImage', async(req, res) => {
-	const image = await client.images.generate(
-		{ 
-			model: "dall-e-3", 
-			prompt: req.query.prompt
-		}
-	);
+	// Generate a new image: required fields model, prompt
+	const image = "REPLACE ME";
 	res.send(image)
 })
 
 app.get('/textToSpeech', async (req, res) => {
+<<<<<<< Updated upstream
 	const speechFile = path.resolve("./sounds/speech.mp3");
 	const mp3 = await client.audio.speech.create({
 		model: "tts-1",
@@ -72,6 +68,13 @@ app.get('/textToSpeech', async (req, res) => {
   	  await fs.promises.writeFile(speechFile, buffer);
 	  //res.send(path);
 })
+=======
+	const speechFile = path.resolve("./speech.mp3");
+
+	// Create a audio speech required fields are model, voice, and input
+	const mp3 = "REPLACE ME";
+});
+>>>>>>> Stashed changes
 
 // Set your server to listen to port 3000 on local host
 app.listen(3000, () => console.log("Listening on port 3000"));
