@@ -1,0 +1,18 @@
+{
+  "name": "aiworkshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "openAiFunctions.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "material-design-icons": "^3.0.1",
+    "openai": "^4.28.0"
+  }
+}

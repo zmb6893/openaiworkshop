@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OpenAI Workshop</title>
+	<link rel="stylesheet" href="./node_modules/bulma/css/bulma-rtl.min.css">
+	<link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css">
+			
+	<style>
+		body {
+			margin: 66px;
+		}
+		.main-title {
+			margin-left: 2rem;
+			margin-right: 2rem;
+			margin-bottom: 66px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log("hello");
+	</script>
+	<div>
+		<h2 class="title is-2">
+			Welcome to...
+		</h2>
+		<h1 class="title is-1 main-title">
+			Incorporating AI into your Project using OpenAI!
+		</h1>
+	</div>
+
+	<div class="box">
+		<h3 class="title is-4">
+			Chat Completions
+		</h3>
+	
+		<input type="text" placeholder="Enter a prompt..." id="message">
+
+		<p class="box" id="chat">
+			Once we finish implementing this, the text will appear here!
+		</p>
+
+		<br>
+
+		<button class="button is-primary" onclick="chatRequest()">
+			Generate Text!
+		</button>
+
+		<script src="script.js"></script>
+		<script type="text/javascript">
+			chatRequest();
+		</script>
+
+	</div>
+
+	<div class="box">
+		<h3 class="title is-4">
+			Generate Image
+		</h3>
+	
+		<p>
+			Enter a prompt to generate an image!
+		</p>
+
+		<input type="text" placeholder="Enter a text input..." id="prompt">
+
+		<img id="image">
+
+		<h5 class="title is-6">Image Description</h5>
+		<p id="imageDescription">Wait for the response...</p>
+
+		<br><br>
+		<button class="button is-primary" onclick="imageRequest()">
+			Generate Image!
+		</button>
+		<script type="text/javascript">
+			imageRequest();
+		</script>
+	</div>
+	
+
+	<div class="box">
+		<h3 class="title is-4">
+			Text to Speech
+		</h3>
+	
+		<p>
+			Copy and paste the generated text from your previous prompt, then click Generate Speech! Once the speech is generated, you can click the play button!
+		</p>
+
+		<input type="text" placeholder="Enter a text input..." id="speech">
+
+		<br><br>
+
+		<button class="button is-primary" onclick="ttsRequest()">
+			Generate Speech!
+		</button>
+		<script type="text/javascript">
+			ttsRequest();
+		</script>
+
+		<p>File Location</p>
+		<p id="fileLocation"></p>
+
+		<button>
+			<span class="icon fas">
+				<i class="material-icons">play_arrow</i>
+			</span>
+		</button>
+	</div>
+	
+
+</body>
+
+</html>
